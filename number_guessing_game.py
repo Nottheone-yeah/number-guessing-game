@@ -4,7 +4,16 @@ number = random.randint(1, 100)
 attempts = 0
 
 while True:
-    guess = int(input("Guess the number: "))
+    try:
+        guess = int(input("Guess the number: "))
+    except ValueError:
+        print("Please enter a number!")
+        continue
+    
+    if guess < 1 or guess > 100:
+        print("Please enter a number between 1 and 100!")
+        continue
+
     attempts += 1
 
     if guess > number:
