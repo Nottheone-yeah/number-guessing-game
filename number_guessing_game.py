@@ -10,18 +10,18 @@ while True:
 
     if difficulty in ["1", "2", "3"]:
         break
-    
+
     print("Invalid choice! Please enter 1, 2, or 3.")
 
 if difficulty == "1":
     maximum = 50
 elif difficulty == "2":
     maximum = 100
-elif difficulty == "3":
+else:
     maximum = 500
 
-    number = random.randint(1, maximum)
-    attempts = 0
+number = random.randint(1, maximum)
+attempts = 0
 
 while True:
     try:
